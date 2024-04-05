@@ -19,7 +19,12 @@ function handleClick(){
     <div className = "character-card" onClick={handleClick}>
       <h3 className = "character-name">{name}</h3>
       {showHomeWorld && <HomeWorld homeWorldName={homeWorld}/>}
-    
+      
+      {showHomeWorld && (
+          <p>Planet: 
+          <span className = "character-planet">{homeWorld}</span>
+          </p>
+      )}
     </div>
   )
 }
